@@ -17,7 +17,7 @@ const DonationPage = () => {
   // Fetch donors from the database
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/donors")
+      .get("https://project-ma.onrender.com/api/donors")
       .then((response) => setDonorList(response.data))
       .catch((error) => console.error(error));
   }, []);
@@ -31,7 +31,7 @@ const DonationPage = () => {
     });
 
     axios
-      .post("http://localhost:5000/api/donate", {
+      .post("https://project-ma.onrender.com/api/donate", {
         ...formData,
         paymentId: response.razorpay_payment_id,
       })
@@ -50,7 +50,7 @@ const DonationPage = () => {
         });
         setIsLoading(false); // Turn off loading state after success
         axios
-          .get("http://localhost:5000/api/donors") // Fetch updated donor list
+          .get("https://project-ma.onrender.com/api/donors") // Fetch updated donor list
           .then((response) => setDonorList(response.data))
           .catch((error) => console.error(error));
       })
@@ -72,7 +72,7 @@ const DonationPage = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/create-order",
+        "https://project-ma.onrender.com/api/create-order",
         { amount: formData.amount }
       );
 
@@ -151,7 +151,7 @@ const DonationPage = () => {
                 onChange={(e) =>
                   setFormData({ ...formData, amount: e.target.value })
                 }
-                className="w-full border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 text-gray-900"
+                className="w-full  border-2 border-gray-200 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 text-gray-900"
                 required
               />
             </div>

@@ -13,7 +13,7 @@ const ContactPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:5000/api/contact", formData)
+      .post("https://project-ma.onrender.com/api/contact", formData)
       .then((response) => alert("Message sent!"))
       .catch((error) => console.error(error));
   };
