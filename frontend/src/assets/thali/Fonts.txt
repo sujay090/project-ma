@@ -1,0 +1,9 @@
+Fonts used in this design:
+
+Font: Berkshire Swash
+Author: Astigmatic
+Url: https://fonts.google.com/specimen/Berkshire+Swash
+
+Font: Quicksand
+Author: Andrew Paglinawan
+Url: https://fonts.google.com/specimen/Quicksand

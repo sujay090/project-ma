@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* styles.css */
+
+.text-shadow {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.326), 0 0 20px rgb(248, 118, 12),
+    0 0 30px rgb(255, 255, 255);
+}
+
+.glow-effect {
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.7))
+    drop-shadow(0 0 20px var(--glow-color-1, rgba(255, 165, 0, 0.5)))
+    drop-shadow(0 0 30px var(--glow-color-2, rgba(255, 69, 0, 0.3)));
+  --glow-color-1: rgb(255, 165, 0);
+  --glow-color-2: rgb(255, 69, 0);
+  animation: color-change 10s infinite linear;
+  -webkit-animation: color-change 10s infinite linear;
+}
+
+@keyframes color-change {
+  0% {
+    --glow-color-1: rgb(255, 165, 0);
+    --glow-color-2: rgb(255, 69, 0);
+  }
+  33% {
+    --glow-color-1: rgb(255, 0, 255);
+    --glow-color-2: rgb(0, 255, 255);
+  }
+  66% {
+    --glow-color-1: rgb(0, 255, 0);
+    --glow-color-2: rgb(255, 0, 0);
+  }
+  100% {
+    --glow-color-1: rgb(255, 255, 0);
+    --glow-color-2: rgb(0, 0, 255);
+  }
+}
